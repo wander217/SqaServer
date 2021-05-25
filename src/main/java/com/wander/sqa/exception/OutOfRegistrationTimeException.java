@@ -3,7 +3,9 @@ package com.wander.sqa.exception;
 import java.time.LocalDateTime;
 
 public class OutOfRegistrationTimeException extends Exception{
-    public OutOfRegistrationTimeException(LocalDateTime start, LocalDateTime end) {
+	private static final long serialVersionUID = -1142243242257692013L;
+
+	public OutOfRegistrationTimeException(LocalDateTime start, LocalDateTime end) {
         super("Thời gian đăng kí tín bắt đầu từ "+start.getHour()
                 +":"+start.getMinute()+":"+start.getSecond()
                 +" "+start.getDayOfMonth()+"/"+start.getMonthValue()+"/"+start.getYear()
